@@ -126,3 +126,7 @@
    .tooltip.bottom .tooltiparrow{
     border-bottom-color: #ffd600;
    }*/
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    padding-top: 0.7em;
+}
