@@ -3,7 +3,7 @@
        margin-bottom: 0;
        border-radius: 0;
        height: 80px;
-       box-shadow: 0px 1px 1px #bdbdbd;
+       box-shadow: 0px 2px 1px #bdbdbd;
        /*border:1px solid #bdbdbd;*/
    }
    /* Add a gray background color and some padding to the footer */
@@ -12,7 +12,7 @@
        height: 80px;
    }*/
     .navshadow{
-      box-shadow: 0px 1px 1px #bdbdbd;
+      box-shadow: 0px 2px 1px #bdbdbd;
     }
 
    .activebar>li>a{
@@ -90,20 +90,23 @@
        background-color: rgba(0, 0, 0, 0);
        margin-bottom: -48px;
    }
-    .search-icon{
-      background-color: white;
-      height: 38px;
+    .search-filter{
+      height: 38.4px;
+      text-align: center;
+      border: none;
+      font-size: 20px;
     }
    .search-form-btn {
        color: #fff;
        background: #231f20;
        border: none;
-       font-weight: 400;
-       line-height: 1;
+       height: 38.4px;
+      /* font-weight: 400;
+       line-height: 1;*/
        border-radius: 0 3px 3px 0;
-       width: 20%;
-       width: calc(150px);
-       font-size: 22px;
+      /* width: 20%;*/
+      width: calc(60px);
+       /*font-size: 22px;*/
    }
 
    .navbar-brand {
@@ -116,7 +119,7 @@
    }
    .tooltip-inner{
     font-size: 22px;
-     background-color: #FFF;
+     background-color: #fff;
      border-radius: 0px;
    }
    /*
