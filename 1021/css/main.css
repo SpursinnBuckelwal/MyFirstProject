@@ -4,6 +4,7 @@
        border-radius: 0;
        height: 80px;
        box-shadow: 0px 1px 1px #bdbdbd;
+       /*border:1px solid #bdbdbd;*/
    }
    /* Add a gray background color and some padding to the footer */
 
@@ -20,14 +21,14 @@
        padding-top: 30px;
        padding-bottom:0px;
        height: 80px;
-       box-shadow: 0px 1px 1px #bdbdbd;
+       /*box-shadow: 0px 1px 1px #bdbdbd;*/
    }
     .logina>li>a{
       background-color: #ffffff;
        padding-top: 2em;
        padding-bottom:0px;
        height: 80px;
-       box-shadow: 0px 1px 1px #bdbdbd;
+       /*box-shadow: 0px 1px 1px #bdbdbd;*/
     }
    footer {
        background-color: #f2f2f2;
