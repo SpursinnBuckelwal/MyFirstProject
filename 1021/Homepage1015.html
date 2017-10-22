@@ -129,7 +129,11 @@
     </style>
     <script>
         $(function(){
-            $('[data-toggle="tooltipNews"]').tooltip({title: "<a href='#'>房市新聞</a><br><a href='#'>促銷資訊</a><br><a href='#'>系統公告</a>", html: true,delay:{"show":100,"hide":1500}});
+            $('[data-toggle="tooltipNews"]').tooltip(
+                {title: "<div><a href='#'>房市新聞</a></div><div><a href='#'>促銷資訊</a></div><div><a href='#'>系統公告</a></div>",
+                 html: true,
+                 delay:{"show":100,"hide":1000
+             }});
         });
     </script>
 </head>
@@ -207,15 +211,35 @@
                     <p>more...</p>
                 </div>
             </div>
-            <div class="searchbar col-sm-4 col-sm-offset-4">
+            <div class="searchbar col-sm-5 col-sm-offset-3">
                 <form class="search">
                     <div class="input-group">
-                        <label class="input-group-addon search-icon"><i class="glyphicon glyphicon-map-marker"></i></label>
-                        <input type="text" class="form-control" placeholder= "Search">
+                        <span class="input-group-btn">
+                                <!-- <div class="dropdown"> -->
+                                    <a href="#" class="btn btn-info dropdown-toggle search-filter" data-toggle="dropdown">台北市 <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">松山區</a></li>
+                                        <li><a href="#">大安區</a></li>
+                                        <li><a href="#">中正區</a></li>
+                                        <li><a href="#">大同區</a></li>
+                                        <li><a href="#">中山區</a></li>
+                                        <li><a href="#">萬華區</a></li>
+                                        <li><a href="#">士林區</a></li>
+                                        <li><a href="#">北投區</a></li>
+                                        <li><a href="#">內湖區</a></li>
+                                        <li><a href="#">南港區</a></li>
+                                        <li><a href="#">文山區</a></li>
+                                        <li><a href="#">台灣大學</a></li>
+
+                                    </ul>
+                                <!-- </div> -->
+                              </span>
+
+                        <input type="text" class="form-control" placeholder= "關鍵字、學校、街道">
                         <div class="input-group-btn">
 
                             <button class="btn btn-default search-form-btn" type="submit">
-                                <span class="button-text ">找房子 </span>
+                                <!-- <span class="button-text ">找房子 </span> -->
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </div>
