@@ -13,24 +13,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <style type="text/css">
-    .headpic{
+    .headpic {
         margin-top: 4em;
         border-radius: 99em;
         /*table-layout: fixed;
         word-wrap: break-word;*/
         width: 7em;
         height: 7em;
-        overflow: hidden;    (讓多出來的不顯示。)
-
+        overflow: hidden;
+        (讓多出來的不顯示。)
     }
-    .headpic img{
+
+    .headpic img {
         height: 7em;
         width: 7em;
     }
-    .headbrand{
+
+    .headbrand {
         margin-top: 5em;
         padding-bottom: 3em;
     }
+
     .sidebar {
         margin-top: 80px;
         /*padding-left: 6em;*/
@@ -41,14 +44,16 @@
     /*.siderbarbox{
         padding-top: 4em;
     }*/
-    .maincontext{
+
+    .maincontext {
         margin-top: 100px;
     }
-    .paneltitle {
 
+    .paneltitle {
+        
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
-        padding: 18px 15px;
+        padding: 15px 15px;
         /*border: 1px solid black;*/
     }
 
@@ -77,8 +82,8 @@
     .titlebrand:hover {
         color: #fff;
         text-decoration-line: none;
-        opacity: 0.8;
-        font-size: 20px;
+        /*opacity: 0.8;*/
+        /*font-size: 20px;*/
     }
 
     .titlebrand:active {
@@ -95,56 +100,59 @@
         color: #F48500;
         font-family: "Comic Sans MS", cursive, sans-serif;
     }
-    .paneltext{
+
+    .paneltext {
         font-size: 6em;
     }
-    .paneltitle{
-        margin-top:-1.56em;
+    .linka{
+        position:absolute; 
+        left: 15em;
+    }
+    .panelboxtitle{
+        margin-top:-1.2em;
     }
     </style>
 </head>
 
 <body>
     <!-- <div class=""> -->
-        <nav class="navbar navbar-fixed-top main">
-            <div class="container-fluid">
-                <div class="navbar-header col-xs-12 col-sm-3">
-                    <a class="navbar-brand " href="#"><img class="navshadow" src="images/For House logo.png" width="120px"></a>
-                </div>
-                <div class="col-xs-12 col-sm-8 navbrand">
-                    <h1><i>I don't know how , but I know HOUSE.</i></h1>
-                </div>
-                <div class="col-xs-12 col-sm-1">
-                    <ul class="nav navbar-nav logina">
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-fixed-top main">
+        <div class="container-fluid">
+            <div class="navbar-header col-xs-12 col-sm-3">
+                <a class="navbar-brand " href="#"><img class="navshadow" src="images/For House logo.png" width="120px"></a>
             </div>
-        </nav>
+            <div class="col-xs-12 col-sm-8 navbrand">
+                <h1><i>I don't know how , but I know HOUSE.</i></h1>
+            </div>
+            <div class="col-xs-12 col-sm-1">
+                <ul class="nav navbar-nav logina">
+                    <li><a href="#"><span class="">Yen Kuei 你好</span> </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- </div> -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-2 sidebar">
                 <div class="col-xs-12 col-sm-4">
-                         <div class="headpic row">
+                    <div class="headpic row">
                         <img src="images/Home-Sofa-2.jpg">
-
                     </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-8 text-center headbrand">
-                        <h4>Welcome.</h4>
-                        <h4><b>Yen Kuei</b></h4>
-                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8 text-center headbrand">
+                    <h4>Welcome.</h4>
+                    <h4><b>Yen Kuei</b></h4>
+                </div>
                 <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-
                     <!-- 區塊2 -->
                     <div class="panel panel-primary siderbarbox">
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
                             <h4 class="panel-title">
-                            <a class="titlebrand" href="#aaa" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="aaa">
                                 <span class="titletext">
                                    <b>管理員工</b>
                                </span >
+                            <a class="titlebrand collapsed linka" href="#aaa" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="aaa">                                
                                     <i class="box-left glyphicon glyphicon-chevron-down"></i>
                             </a>
                         </h4>
@@ -159,9 +167,9 @@
                         </div>
                         <!--  <div class="panel panel-primary"> -->
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
-                            <h4 class="panel-title">
-                                <a class="titlebrand" href="#bbb" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="bbb">
-                                <span class="titletext"><b>審核權限</b></span>
+                            <h4 class="panel-title"><span class="titletext"><b>審核權限</b></span>
+                                <a class="titlebrand collapsed linka" href="#bbb" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="bbb">
+                                
 
                         <span class="box-left glyphicon glyphicon-chevron-down"></span></a></h4>
                         </div>
@@ -177,9 +185,9 @@
                         <!-- 區塊3 -->
                         <!-- <div class="panel panel-primary"> -->
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
-                            <h4 class="panel-title">
-                        <a class="titlebrand" href="#ccc" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="ccc">
-                            <span class="titletext"><b>維護房屋資料</b></span>
+                            <h4 class="panel-title"><span class="titletext"><b>維護房屋資料</b></span>
+                        <a class="titlebrand collapsed linka" href="#ccc" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ccc">
+                            
                         <span class="box-left glyphicon glyphicon-chevron-down"></span></a>
                       </h4>
                         </div>
@@ -191,9 +199,9 @@
                         <!-- </div> -->
                         <!-- <div class="panel panel-primary"> -->
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
-                            <h4 class="panel-title">
-                        <a class="titlebrand" href="#ddd" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="ddd">
-                                <span class="titletext"><b>管理檢舉</b></span>
+                            <h4 class="panel-title"><span class="titletext"><b>管理檢舉</b></span>
+                        <a class="titlebrand collapsed linka" href="#ddd" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ddd">
+                                
                         <span class="box-left glyphicon glyphicon-chevron-down"></span></a>
                       </h4>
                         </div>
@@ -208,9 +216,9 @@
                         <!-- </div> -->
                         <!-- <div class="panel panel-primary"> -->
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
-                            <h4 class="panel-title">
-                        <a class="titlebrand" href="#eee" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="eee">
-                                <span class="titletext"><b>管理新聞</b></span>
+                            <h4 class="panel-title"><span class="titletext"><b>管理新聞</b></span>
+                        <a class="titlebrand collapsed linka" href="#eee" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="eee">
+                                
                         <span class="box-left glyphicon glyphicon-chevron-down"></span></a>
                       </h4>
                         </div>
@@ -228,9 +236,9 @@
                         <!-- </div> -->
                         <!-- <div class="panel panel-primary"> -->
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
-                            <h4 class="panel-title">
-                        <a class="titlebrand" href="#fff" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="fff">
-                                <span class="titletext"><b>管理廣告</b></span>
+                            <h4 class="panel-title"><span class="titletext"><b>管理廣告</b></span>
+                        <a class="titlebrand collapsed linka" href="#fff" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="fff">
+                                
                         <span class="box-left glyphicon glyphicon-chevron-down"></span></a>
                       </h4>
                         </div>
@@ -243,9 +251,9 @@
                             </div>
                         </div>
                         <div class="panel-heading paneltitle row" role="tab" id="panel2">
-                            <h4 class="panel-title">
-                        <a class="titlebrand" href="#ggg" data-parent="#accordion2" data-toggle="collapse" role="button" class="collapsed" aria-expanded="false" aria-controls="ggg">
-                                <span class="titletext"><b>管理常見問題</b></span>
+                            <h4 class="panel-title"><span class="titletext"><b>管理常見問題</b></span>
+                        <a class="titlebrand collapsed linka" href="#ggg" data-parent="#accordion2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ggg">
+                                
                         <span class="box-left glyphicon glyphicon-chevron-down"></span></a>
                       </h4>
                         </div>
@@ -258,115 +266,114 @@
                     </div>
                 </div>
             </div>
-
-        <div class="col-xs-12 col-sm-10 maincontext">
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-tasks"></span><p class="text-right paneltitle">2</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+            <div class="col-xs-12 col-sm-10 maincontext">
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-tasks"></span><p class="text-right panelboxtitle">2</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-send"></span><p class="text-right paneltitle">10</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-send"></span><p class="text-right panelboxtitle">10</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-question-sign"></span><p class="text-right paneltitle">15</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-question-sign"></span><p class="text-right panelboxtitle">15</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-gift"></span><p class="text-right paneltitle">22</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-gift"></span><p class="text-right panelboxtitle">22</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-flag"></span><p class="text-right paneltitle">212</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-flag"></span><p class="text-right panelboxtitle">212</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-grain"></span><p class="text-right paneltitle">20</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-grain"></span><p class="text-right panelboxtitle">20</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-tasks"></span><p class="text-right paneltitle">9</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-tasks"></span><p class="text-right panelboxtitle">9</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-3">
-                <div class="panel panel-success">
-                  <div class="panel-heading">
-                    <h2 class="panel-title paneltext">
-                        <span class="glyphicon glyphicon-thumbs-down"></span><p class="text-right paneltitle">0</p></h2>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                  <div class="panel-body">
-                    <p class="text-right">詳情
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
-                  </div>
+                <div class="col-xs-12 col-sm-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h2 class="panel-title paneltext">
+                        <span class="glyphicon glyphicon-thumbs-down"></span><p class="text-right panelboxtitle">0</p></h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="panel-body">
+                            <p class="text-right">詳情
+                                <span class="glyphicon glyphicon-circle-arrow-down"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div></div>
+    </div>
     <footer class="container-fluid">
         <div class="container text-center">
             <div class="col-xs-12 col-sm-2">
