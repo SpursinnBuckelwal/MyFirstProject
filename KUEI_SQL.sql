@@ -44,7 +44,7 @@ CREATE TABLE HSECOLL (
  MEM_NO VARCHAR2(10) NOT NULL,
  CONSTRAINT PK_HSECOLL PRIMARY KEY (HOUSE_NO,MEM_NO),
  --CONSTRAINT FK_HSEHNO FOREIGN KEY (HOUSE_NO) REFERENCES HOUSEINFO(HOUSE_NO),
- CONSTRAINT FK_HSEMNO FOREIGN KEY (MEM_NO) REFERENCES MEMBER(MEM_NO) 
+ CONSTRAINT FK_HSEMNO FOREIGN KEY (MEM_NO) REFERENCES MEMBER(MEM_NO)
 );
 
 INSERT INTO HSECOLL VALUES('HN00000002','MB00000003');
@@ -84,9 +84,9 @@ CREATE TABLE MRMSG(
 );
 
 INSERT INTO MRMSG(MEM_NO,RTR_NO,MR_MSG) VALUES ('MB00000004','RT00000010','比爾蓋茲:這間房子好像還不錯，請問房仲你可以帶我去看一下嗎?
-陳金鋒:當然啦，客官這間房子很熱門喔，這幾天看這間的人很多 
-比爾蓋茲:是喔!!!那你什麼時候有空呢，我想越快越好 
-陳金鋒:好的，我看一下，不然我給你看一下我的行事曆看你哪個時間比較適合? 
+陳金鋒:當然啦，客官這間房子很熱門喔，這幾天看這間的人很多
+比爾蓋茲:是喔!!!那你什麼時候有空呢，我想越快越好
+陳金鋒:好的，我看一下，不然我給你看一下我的行事曆看你哪個時間比較適合?
 比爾蓋茲: 恩... 那就"11/05 14:00"好了 陳金鋒:OK , 那我們就那天見囉 ^___^');
 INSERT INTO MRMSG(MEM_NO,RTR_NO,MR_MSG) VALUES ('MB00000001','RT00000003','賈伯斯:HI 安安，房仲你好啊!! 林志玲:不好意思，我先去洗澡喔!! 林志玲已離線');
 INSERT INTO MRMSG(MEM_NO,RTR_NO,MR_MSG) VALUES ('MB00000001','RT00000012','楊美麗:先生您好，我是xx房仲，我看到你正在找房，我這邊正好有不錯的物件，你要不要參考一下啊!! 賈伯斯:不好意思，我先去洗澡喔!! 賈伯斯已離線');
@@ -106,6 +106,6 @@ CREATE TABLE MSMSG(
 
 INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000002','SL000002','喬丹:ㄟ 明天下午來打籃球阿! 歐德傢俱:好啊，球你帶場你佔，不來算輸 喬丹:槓...又遇到鄉民...');
 INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000003','SL000004','彼得吳:你們的家具品質好，而且出貨速度超快的，我才剛下單喝杯茶你們就送來了呢，真是迅速 詩肯柚木:謝謝您的鼓勵，我們最近採用了最新的JAVA技術，讓我們即時掌握需求');
-INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000004','SL000004','比爾蓋茲:你好啊，想請問一下為什麼我訂得傢俱還沒送來呢? 
+INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000004','SL000004','比爾蓋茲:你好啊，想請問一下為什麼我訂得傢俱還沒送來呢?
 詩肯柚木:先生對不起阿，您訂的家具太高級了，我們不敢有任何損傷，因此採用最安全的方式搬運家具，大概在3個月即可看到我們的工人搬到那了，在這期間請敬請等候');
 commit;
