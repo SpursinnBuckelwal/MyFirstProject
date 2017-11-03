@@ -112,4 +112,5 @@ INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000002','SL00000002','喬�
 INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000003','SL00000004','彼得吳:你們的家具品質好，而且出貨速度超快的，我才剛下單喝杯茶你們就送來了呢，真是迅速 詩肯柚木:謝謝您的鼓勵，我們最近採用了最新的JAVA技術，讓我們即時掌握需求');
 INSERT INTO MSMSG(MEM_NO,SLR_NO,MS_MSG) VALUES ('MB00000004','SL00000004','比爾蓋茲:你好啊，想請問一下為什麼我訂得傢俱還沒送來呢?
 詩肯柚木:先生對不起阿，您訂的家具太高級了，我們不敢有任何損傷，因此採用最安全的方式搬運家具，大概在3個月即可看到我們的工人搬到那了，在這期間請敬請等候');
+UPDATE msmsg set ms_msg='喬丹:ㄟ 明天下午來打籃球阿! 歐德傢俱:好啊，球你帶場你佔，不來算輸 喬丹:槓...又遇到鄉民...崩潰',ms_time=TO_TIMESTAMP('2017-11-02 10:12:30','YYYY/MM/DD hh:mi:ss') where mem_no ='MB00000002' and slr_no = 'SL00000002';
 commit;
