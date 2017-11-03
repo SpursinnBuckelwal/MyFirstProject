@@ -484,7 +484,7 @@ final_update_time timestamp default current_timestamp,
 constraint FK_HOUSEINFO_REALESTATE foreign key(RE_NO) REFERENCES RealEstate(RE_NO)
 
 );
-
+----------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE HOUSEIMAGES(
 Img_No varchar2(100) not null primary key,
 House_No varchar2(100) not null,

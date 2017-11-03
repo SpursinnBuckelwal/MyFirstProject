@@ -476,6 +476,7 @@ HOUSE_STATES VARCHAR2(100),
 INSERT_TIME TIMESTAMP,
 FINAL_UPDATE_TIME TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 CONSTRAINT FK_HOUSEINFO_REALESTATE FOREIGN KEY(RE_NO) REFERENCES REALESTATE(RE_NO)
+
 );
 ----------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE HOUSEIMAGES(
@@ -790,16 +791,7 @@ CREATE TABLE RESREC (
  RESR_STATES         VARCHAR2(15) NOT NULL,
  RESR_DATE           DATE,
  RESR_PERIOD         VARCHAR2(12),
- RESR_HPRIC          NUMBER(2),
- RESR_HSIZE          NUMBER(2),
- RESR_MGT            NUMBER(2),
- RESR_PUC            NUMBER(2),
- RESR_STR            NUMBER(2),
- RESR_WALL           NUMBER(2),
- RESR_LTG            NUMBER(2),
- RESR_VEN            NUMBER(2),
- RESR_TC             NUMBER(2),
- RESR_LC             NUMBER(2),
+ HSE_EVAL            CLOB,
  HSE_REV             CLOB,
  MEM_RATE            NUMBER(2),
  MEM_REV             VARCHAR2(300),
