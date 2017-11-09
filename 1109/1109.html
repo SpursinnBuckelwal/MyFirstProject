@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Title Page</title>
+     <link rel="stylesheet" href="./jquery.rateyo.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./jquery.rateyo.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+		 var rating = 1.6;
+
+        $(".counter").text(rating);
+
+		$(".raten").rateYo({
+          rating: rating,
+          numStars: 5,
+          precision: 2,
+          starWidth: "30px",
+          spacing: "5px",
+	  // rtl: true,
+	  //readOnly: true,
+          multiColor: {
+
+            startColor: '#ffbf00',
+            endColor  : "#ffff00"
+          }
+          // onInit: function () {
+
+          //   console.log("On Init");
+          // },
+          // onSet: function () {
+          //   readOnly: true
+          // }
+        });
+		for(i=1;i<6;i++){
+			j = 0 ;
+			$("td:nth-child("+i+")").on("rateyo.set", function (e, data) {
+				j+=data.rating*1;
+				$("#raten").text(parseInt(j/25*100)+"%");
+				console.log(j); });
+
+		}
+
+		// for(i=1;i<6;i++){
+		// 	if($("td:nth-child("+i+")"))
+		// }
+          // .on("rateyo.change", function () { console.log("rateyo.change"); });
+       $(".aa").click(function(){
+       		for(i=1;i<6;i++){
+			$("td:nth-child("+i+")").rateYo({
+				rating: rating,
+          numStars: 5,
+          precision: 2,
+          starWidth: "30px",
+          spacing: "5px",
+	  // rtl: true,
+	  //readOnly: true,
+          multiColor: {
+
+            startColor: '#ffbf00',
+            endColor  : "#ffff00"
+          },
+       			readOnly: true
+       		});
+				}
+       });
+});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+    <table class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>總價</th>
+                <th>坪數</th>
+                <th>管理</th>
+                <th>公共設施</th>
+                <th>格局</th>
+				<th>總分</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="aa">
+                <td><div class="raten"></div></td>
+                <td><div class="raten"></div></td>
+                <td><div class="raten"></div></td>
+                <td><div class="raten"></div></td>
+                <td><div class="raten"></div></td>
+                <td><div id="raten"></div></td>
+				<td><div class="btn-group aa">
+					<a href="#" class="btn btn-primary" role="button">確定修改</a>
+				</div></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+
+</html>
