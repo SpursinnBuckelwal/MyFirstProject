@@ -14,10 +14,11 @@
     <script type="text/javascript" src="./jquery.rateyo.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        $('.table-hover').append( '<tbody><tr id="aa1"><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody>' );
-        for(m = 1 ; m < 6 ; m++){
-            var rating =0;
-        $("#aa1>td:nth-child("+m+")").rateYo({
+        var rating = 1.6;
+
+        
+
+        $(".raten").rateYo({
             rating: rating,
             numStars: 5,
             precision: 2,
@@ -37,13 +38,12 @@
             //   readOnly: true
             // }
         });
-    };
         var j = 0;
 
         $(".raten").on("rateyo.set", function(e, data) {
 
-            sumRate(print);
-
+            //sumRate(print);
+             sumRate2(this.closest("tr"), print);
         });
 
 
@@ -54,7 +54,22 @@
 
         function sumRate(e) {
             j = 0;
-            $.each($(".raten"), function(index, value) {
+            console.log($(".raten"));
+            // $.each($(".raten"), function(index, value) {
+            //     j += $(value).rateYo("rating");
+            //     e();
+            // });
+        }
+
+ function sumRate2(a,e) {
+            j = 0;
+ console.log($(a).find(".raten"));
+// console.log($("a div"));
+// console.log($("#kuei"));
+
+            $.each($(a).find(".raten"), function(index, value) {
+
+
                 j += $(value).rateYo("rating");
                 e();
             });
@@ -64,6 +79,7 @@
         $(".aa").click(function(){
           $(".raten").rateYo("option", "readOnly", true);
         });
+        
     });
     </script>
 </head>
@@ -81,7 +97,33 @@
                     <th>滿意度</th>
                 </tr>
             </thead>
-
+            <tbody>
+                <tr id="kuei">
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div class="raten"></div>
+                    </td>
+                    <td>
+                        <div id="ratensum"></div>
+                    </td>
+                    <td>
+                        <div class="btn-group aa">
+                            <a href="#" class="btn btn-primary" role="button">確定修改</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </body>
