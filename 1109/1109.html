@@ -14,11 +14,10 @@
     <script type="text/javascript" src="./jquery.rateyo.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-        var rating = 1.6;
-
-        $(".counter").text(rating);
-
-        $(".raten").rateYo({
+        $('.table-hover').append( '<tbody><tr id="aa1"><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody>' );
+        for(m = 1 ; m < 6 ; m++){
+            var rating =0;
+        $("#aa1>td:nth-child("+m+")").rateYo({
             rating: rating,
             numStars: 5,
             precision: 2,
@@ -38,6 +37,7 @@
             //   readOnly: true
             // }
         });
+    };
         var j = 0;
 
         $(".raten").on("rateyo.set", function(e, data) {
@@ -81,33 +81,7 @@
                     <th>滿意度</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr >
-                    <td>
-                        <div class="raten"></div>
-                    </td>
-                    <td>
-                        <div class="raten"></div>
-                    </td>
-                    <td>
-                        <div class="raten"></div>
-                    </td>
-                    <td>
-                        <div class="raten"></div>
-                    </td>
-                    <td>
-                        <div class="raten"></div>
-                    </td>
-                    <td>
-                        <div id="ratensum"></div>
-                    </td>
-                    <td>
-                        <div class="btn-group aa">
-                            <a href="#" class="btn btn-primary" role="button">確定修改</a>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
+
         </table>
     </div>
 </body>
